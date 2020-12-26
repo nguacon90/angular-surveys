@@ -1,0 +1,171 @@
+{
+    "mwForm":{
+        "form":{
+            "name": "Tên bài kiểm tra",
+            "name.placeholder": "Tên bài kiểm tra",
+            "description": "Mô tả bài kiểm tra",
+            "subQuestion": "Câu hỏi phụ",
+            "subQuestionPlaceHolder": "Chọn câu hỏi phụ"
+        },
+        "buttons": {
+            "addPage":"Thêm trang",
+            "moveDown": "Di chuyển xuống dưới",
+            "moveUp": "Di chuyển lên trên",
+            "removePage": "Xoá trang",
+            "remove": "Xoá",
+            "addElement": "Thêm thành phần",
+            "questionReady": "Ready",
+            "next": "Next",
+            "back": "Back",
+            "submit": "Submit",
+            "begin": "Begin",
+            "fold": "Fold",
+            "unfold": "Unfold",
+            "edit": "Sửa",
+            "clone": "Nhân bản",
+            "view": "Xem",
+            "addInput": "Add Input",
+            "addSubQuestion": "Thêm câu hỏi phụ"
+        },
+        "page":{
+            "tab":{
+                "heading":"Page {{page}} of {{allPages}}"
+            },
+            "elements":{
+                "empty": "Chưa có nội dung"
+            },
+            "pageWithNameCheckbox": "Đặt tên trang",
+            "name": "Tên trang"
+        },
+        "pageFlow":{
+            "afterPage":"After page {{page}}:",
+            "afterQuestionAnswer": "Go to page based on answer",
+            "goToPage": "Go to page {{page.number}}",
+            "goToNextPage": "Continue to next page",
+            "submitForm": "Submit form",
+            "showSubQuestionBaseOnQuestionAnswer": "Hiển thị câu hỏi phụ theo câu trả lời"
+        },
+        "elements":{
+            "question":"Câu hỏi",
+            "image":"Hình ảnh",
+            "paragraph": "Đoạn văn bản"
+        },
+        "question":{
+            "types":{
+                "text":{
+                    "name": "Văn bản ngắn"
+                },
+                "textarea":{
+                    "name": "Văn bản dài"
+                },
+                "radio":{
+                    "name": "Chọn một câu trả lời"
+                },
+                "select":{
+                    "name": "Select"
+                },
+                "checkbox":{
+                    "name": "Chọn nhiều câu trả lời"
+                },
+                "grid":{
+                    "name": "Grid"
+                },
+                "priority":{
+                    "name": "Priority"
+                },
+                "division":{
+                    "name": "Division"
+                },
+                "number":{
+                    "name": "Number"
+                },
+                "date":{
+                    "name": "Date"
+                },
+                "datetime":{
+                    "name": "Datetime"
+                },
+                "time":{
+                    "name": "Time"
+                },
+                "email":{
+                    "name": "Email"
+                },
+                "range":{
+                    "name": "Range"
+                },
+                "url":{
+                    "name": "URL"
+                }
+
+
+            },
+            "text": "Câu hỏi",
+            "type": "Chọn loại câu trả lời",
+            "required": "Bắt buộc",
+            "preview":{
+                "text":"Short answer text",
+                "textarea":"Long answer text",
+                "otherAnswer": "Other"
+            },
+            "division":{
+                "quantity": "Quantity",
+                "unit": "Unit label",
+                "assignedSumLabel": "Assigned",
+                "fromRequiredLabel":"from required"
+
+            },
+            "priority":{
+                "sorted": "Sorted",
+                "available": "Available",
+                "clickToAddItem": "Click to add item"
+            },
+            "grid":{
+                "cellInputType": "Cell input type",
+                "cellInputTypes":{
+                    "radio": "Radio",
+                    "checkbox": "Checkbox",
+                    "text": "Text",
+                    "number": "Number",
+                    "date": "Date",
+                    "time": "Time"
+                },
+                "rowLabel": "Row {{row}}",
+                "clickToAddRow": "Click to add row",
+                "columnLabel": "Column {{col}}",
+                "clickToAddColumn": "Click to add column"
+            },
+            "range":{
+                "from": "Range from",
+                "to": "to"
+            },
+            "number": {
+                "min": "Min",
+                "max": "Max"
+            },
+            "orLabel": "or ",
+            "otherLabel": "Other: ",
+            "userAnswer": "User answer",
+            "buttons":{
+                "addOption":"Click to add option",
+                "addOther":"Add 'Other'"
+            }
+
+        },
+        "image":{
+            "selectImageButton": "Select image",
+            "caption": "Image caption"
+        },
+        "paragraph":{
+            "placeholder": "Enter paragraph text"
+        },
+        "confirmationPage":{
+            "title": "Confirmation page",
+            "customMessage": "Custom confirmation message",
+            "defaultMessage": "Your response has been recorded",
+            "errorMessage": "Error! Your response has not been recorded",
+            "pendingMessage": "Your response is being saved."
+        }
+    }
+
+}
