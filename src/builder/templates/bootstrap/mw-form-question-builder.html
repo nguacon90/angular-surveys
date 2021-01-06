@@ -119,7 +119,7 @@
                 <div class="col-xs-10">
                     <div class="checkbox">
                         <label>
-                            <input type="checkbox" ng-model="ctrl.question.required" ng-disabled="ctrl.readOnly"><span translate="mwForm.question.required">Required</span>
+                            <input type="checkbox" ng-model="ctrl.question.required" ng-disabled="ctrl.readOnly" ng-change="ctrl.changeRequiredSubQuestions()"><span translate="mwForm.question.required">Required</span>
                         </label>
                     </div>
                 </div>

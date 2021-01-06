@@ -150,11 +150,27 @@ angular.module('mwFormBuilder').factory("FormQuestionBuilderId", function(){
                 ctrl.question.subQuestions.push({
                     id: mwFormUuid.get(),
                     text: null,
-                    type:null,
-                    required:true
+                    type: null,
+                    required: ctrl.question.required
                 });
             };
 
+            ctrl.changeRequiredSubQuestions = function() {
+                if(ctrl.question.subQuestions) {
+                    ctrl.question.subQuestions.forEach(function(sq) {
+                        sq.required = ctrl.question.required;
+                    });
+                }
+                if(ctrl.question.offeredAnswers) {
+                    ctrl.question.offeredAnswers.forEach(function(a) {
+                       if(a.selectedSubQuestions) {
+                           a.selectedSubQuestions.forEach(function(sq){
+                               sq.required = ctrl.question.required;
+                           });
+                       }
+                    });
+                }
+            };
             // Prior to v1.5, we need to call `$onInit()` manually.
             // (Bindings will always be pre-assigned in these versions.)
             if (angular.version.major === 1 && angular.version.minor < 5) {

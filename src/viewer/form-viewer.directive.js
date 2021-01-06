@@ -217,23 +217,27 @@ angular.module('mwFormViewer').directive('mwFormViewer', function ($rootScope) {
             ctrl.onResponseChanged = function (pageElement) {
                 ctrl.setDefaultNextPage();
                 ctrl.updateNextPageBasedOnAllAnswers();
-                ctrl.updateShowSubQuestionBaseOnAnswers();
+                ctrl.updateShowSubQuestionBaseOnAnswers(pageElement);
             };
-            ctrl.updateShowSubQuestionBaseOnAnswers = function() {
+            ctrl.updateShowSubQuestionBaseOnAnswers = function(pageElement) {
                 ctrl.currentPage.elements.forEach(function (element) {
-                    ctrl.updateShowSubQuestionBaseOnAnswer(element);
+                    ctrl.updateShowSubQuestionBaseOnAnswer(pageElement, element);
                 });
             };
 
-            ctrl.updateShowSubQuestionBaseOnAnswer = function (pageElement) {
-                var question = pageElement.question;
+            ctrl.updateShowSubQuestionBaseOnAnswer = function (pageElement, element) {
+                var question = element.question;
                 if(!question || !ctrl.responseData[question.id]) {
                     return;
                 }
-                if(ctrl.responseData[question.id].subQuestions && Object.keys(ctrl.responseData[question.id].subQuestions).length > 0) {
-                    ctrl.responseData[question.id].subQuestions  = {};
+
+                if(pageElement && pageElement.id == element.id) {
+                    if (ctrl.responseData[question.id].subQuestions && Object.keys(ctrl.responseData[question.id].subQuestions).length > 0) {
+                        ctrl.responseData[question.id].subQuestions = {};
+                    }
                 }
-                if (question && question.showSubQuestionModifier) {
+
+                if (question.showSubQuestionModifier) {
                     question.offeredAnswers.forEach(function (answer) {
                         if (ctrl.responseData[question.id].selectedAnswer == answer.id) {
                             question.showSubAnswers = true;
