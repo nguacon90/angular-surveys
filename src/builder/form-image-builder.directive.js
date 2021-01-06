@@ -51,6 +51,12 @@ angular.module('mwFormBuilder').factory("FormImageBuilderId", function(){
                 ctrl.image.align = align;
             }
 
+            ctrl.handleResize = function(event) {
+                if(event.target.classList.contains('resizable')) {
+                    ctrl.image.width = event.target.style.width;
+                    ctrl.image.height = event.target.style.height;
+                }
+            }
 
         },
         link: function (scope, ele, attrs, formPageElementBuilder){

@@ -5,7 +5,10 @@
 
             <div class="image-edition row" ng-if="ctrl.image.src" >
                 <div class="col-md-12" ng-class="'align-'+ctrl.image.align">
-                    <img  ng-src="{{ctrl.image.src}}">
+                    <div class="resizable" ng-mouseup="ctrl.handleResize($event)">
+                        <img ng-src="{{ctrl.image.src}}" width="{{ctrl.image.width ? ctrl.image.width : '100%'}}"
+                        height="{{ctrl.image.height ? ctrl.image.height : '100%'}}">
+                    </div>
                 </div>
                 <div class="col-md-12 image-align-control">
                     <div class="btn-group" role="group" aria-label="Image align">
@@ -16,7 +19,7 @@
                 </div>
 
 
-                <div class="form-horizontal">
+                <div class="form-horizontal col-md-12">
 
 
                     <div class="form-group">
@@ -42,7 +45,8 @@
         <div class="mw-preview" ng-if="ctrl.isPreview">
 
             <figure ng-class="'align-'+ctrl.image.align">
-                <img ng-src="{{ctrl.image.src}}" ng-attr-alt="ctrl.image.caption">
+                <img ng-src="{{ctrl.image.src}}" width="{{ctrl.image.width ? ctrl.image.width : 'auto'}}"
+                     height="{{ctrl.image.height ? ctrl.image.height : 'auto'}}" ng-attr-alt="ctrl.image.caption">
                 <figcaption ng-if="ctrl.image.caption">{{ctrl.image.caption}}</figcaption>
             </figure>
         </div>

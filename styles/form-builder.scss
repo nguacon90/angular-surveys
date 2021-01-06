@@ -649,3 +649,10 @@
 .offered-text-answer:focus, .offered-text-answer:active {
     outline: none;
 }
+.resizable {
+    resize: both;
+    overflow: hidden;
+    min-width: 200px;
+    min-height: 200px;
+    display: inline-block;
+}

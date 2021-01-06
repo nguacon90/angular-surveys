@@ -25,7 +25,9 @@
                     </div>
                     <div class="image-element" ng-switch-when="image">
                         <figure ng-class="'align-'+pageElement.image.align">
-                            <img ng-src="{{pageElement.image.src}}" ng-attr-alt="pageElement.image.caption">
+                            <img ng-src="{{pageElement.image.src}}" ng-attr-alt="pageElement.image.caption"
+                                 width="{{pageElement.image.width ? pageElement.image.width : 'auto'}}"
+                                 height="{{pageElement.image.height ? pageElement.image.height : 'auto'}}">
                             <figcaption ng-if="pageElement.image.caption">{{pageElement.image.caption}}</figcaption>
                         </figure>
                     </div>
